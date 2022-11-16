@@ -1,0 +1,44 @@
+main{
+    padding: 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:  "h  h  h"
+                "n  n  n"
+                "a  a  as"
+                "f  f  f";
+
+}
+header{
+    grid-area: h;
+}
+nav{
+    grid-area: n;
+}
+article img{
+    width: 100%;
+}
+article{
+ 
+    grid-area: a;
+}
+aside{
+    grid-area: as;
+}
+footer{
+    grid-area: f;
+}
+header,article,aside,footer{
+    border: solid 2px;
+}
+@media only screen and (max-width: 600px) {
+    main{
+    grid-template-columns: 1fr;
+    grid-template-areas:"h"
+                        "n"
+                        "as"
+                        "a"
+                        "f";
+
+    }
+
+}
