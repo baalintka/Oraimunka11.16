@@ -10,35 +10,81 @@ main{
 }
 header{
     grid-area: h;
+    background-color: aquamarine;
 }
 nav{
     grid-area: n;
+    background-color: aquamarine;
+    
 }
+ul{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    
+    
+}
+div.aa{
+    margin: 0 auto;
+    border: solid 2px;
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+
 article img{
-    width: 100%;
+    width: 90%;
+    padding: 10px;
+   
+    
+}
+.kep{
+    height: 200px;
+    overflow: hidden;
 }
 article{
- 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-area: a;
+    background-color: aquamarine;
 }
 aside{
     grid-area: as;
 }
 footer{
     grid-area: f;
+    
 }
-header,article,aside,footer{
+header,article,aside,footer,nav{
     border: solid 2px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     main{
-    grid-template-columns: 1fr;
-    grid-template-areas:"h"
-                        "n"
-                        "as"
-                        "a"
-                        "f";
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:"h h"
+                        "n n"
+                        "as as"
+                        "a a"
+                        "f f";
 
     }
+    article{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 
+}
+@media only screen and (max-width: 400px) {
+    main{
+        grid-template-columns: 1fr;
+        grid-template-areas: "h"
+                             "n"
+                             "as"
+                             "a"
+                             "f"
+}
+article{
+    display: grid;
+    grid-template-columns: 1fr;
+}
 }
